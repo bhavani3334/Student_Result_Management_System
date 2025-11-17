@@ -21,8 +21,8 @@ if (empty($student_name) || empty($sem_id)) {
 
 // Prepare INSERT query
 $sql = "INSERT INTO marks_srms 
-(student_name, sem_id, marks1, marks2, marks3, marks4, marks5, marks6) 
-VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+(student_id, student_name, sem_id, marks1, marks2, marks3, marks4, marks5, marks6) 
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 
 if (!$stmt) {
@@ -31,9 +31,10 @@ if (!$stmt) {
 
 // Bind parameters
 $stmt->bind_param(
-    "siiiiiii",
-    $student_name, // string
+    "siiiiiiii",
+    $student_name,   //string
     $sem_id,       // int
+    $student_id,         //int
     $marks[1],
     $marks[2],
     $marks[3],

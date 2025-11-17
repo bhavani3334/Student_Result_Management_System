@@ -2,21 +2,22 @@
 include_once('admin/db_conn.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usn = trim($_POST['usn']);
-    $dob = date("Y-m-d", strtotime($_POST['dob']));
+    // Retrieve student_id and sem_id from POST request
+    $student_id = trim($_POST['student_id']);
+    $sem_id = trim($_POST['sem_id']);
 
-    // Fetch student details
-    $stmt = $conn->prepare("SELECT * FROM student_srms WHERE student_usn = ? AND student_dob = ?");
-    $stmt->execute([$usn, $dob]);
+    // Fetch student details by student_id
+    $stmt = $conn->prepare("SELECT * FROM student_srms WHERE student_id = ?");
+    $stmt->execute([$student_id]);
     $student = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($student) {
         echo "<h2 style='text-align:center;'>Result for {$student['student_name']}</h2>";
-        echo "<p style='text-align:center;'>USN: {$student['student_usn']} | DOB: {$student['student_dob']}</p>";
+        echo "<p style='text-align:center;'>Student ID: {$student['student_id']}</p>";
 
-        // Fetch marks using student name and sem_id
-        $stmt_marks = $conn->prepare("SELECT * FROM marks_srms WHERE student_name = ? AND sem_id = ?");
-        $stmt_marks->execute([$student['student_name'], $student['sem_id']]);
+        // Fetch marks for the student and semester
+        $stmt_marks = $conn->prepare("SELECT * FROM marks_srms WHERE student_id = ? AND sem_id = ?");
+        $stmt_marks->execute([$student_id, $sem_id]);
         $marks = $stmt_marks->fetch(PDO::FETCH_ASSOC);
 
         if ($marks) {
@@ -41,9 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "<p style='text-align:center; color:red;'>Marks not available yet for this semester.</p>";
         }
-
     } else {
-        echo "<p style='text-align:center; color:red;'>Incorrect USN or DOB. Result not found.</p>";
+        echo "<p style='text-align:center; color:red;'>Student ID not found.</p>";
     }
 }
 ?>

@@ -53,11 +53,11 @@
     <form action="result_action.php" method="POST">
         <h2>Check Your Result</h2>
 
-        <label>Student USN</label><br>
-        <input type="text" name="usn" placeholder="Enter USN" required><br>
+        <label>Student ID</label><br>
+        <input type="text" name="student_id" placeholder="Enter Student ID" required><br>
 
-        <label>Student DOB</label><br>
-        <input type="date" name="dob" required><br>
+        <label>SEM ID</label><br>
+        <input type="text" name="sem_id" placeholder="Enter Marks ID" required><br>
 
         <button type="submit" name="submit">Fetch Result</button><br>
         <a href="index.php">Back to Homepage</a>

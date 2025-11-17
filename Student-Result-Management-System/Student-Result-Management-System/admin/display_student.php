@@ -70,7 +70,7 @@ if (isset($_GET['del'])) {
                 <th>Name</th>
                 <th>Dept Code</th>
                 <th>Sem</th>
-                <th>USN</th>
+                <th>ID</th>
                 <th>Email</th>
                 <th>Gender</th>
                 <th>DOB</th>
@@ -84,7 +84,7 @@ if (isset($_GET['del'])) {
                     <td><?php echo $rows['student_name']; ?></td>
                     <td><?php echo $rows['class_code']; ?></td>
                     <td><?php echo $rows['sem_id']; ?></td>
-                    <td><?php echo $rows['student_usn']; ?></td>
+                    <td><?php echo $rows['student_id']; ?></td>
                     <td><?php echo $rows['student_email_id']; ?></td>
                     <td><?php echo $rows['student_gender']; ?></td>
                     <td><?php echo $rows['student_dob']; ?></td>

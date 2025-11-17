@@ -15,6 +15,7 @@ $id = $_GET['id'] ?? '';
 $cid = $_GET['cid'] ?? '';
 $dc = $_GET['dc'] ?? '';
 $sname = $_GET['sname'] ?? '';
+$sid = $_GET['sid'] ?? '';
 $semid = $_GET['semid'] ?? '';
 $m1 = $_GET['m1'] ?? '';
 $m2 = $_GET['m2'] ?? '';

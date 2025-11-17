@@ -29,6 +29,10 @@ if (!$conn) die("Connection failed: " . mysqli_connect_error());
 <div class="add">
     <h3>Insert Marks</h3>
     <form action="add_marks_action.php" method="POST">
+
+        <label>Student Id</label>
+        <input type="text" name="student_id" placeholder="Enter Student USN" required>
+
         <label>Student Name</label>
         <input type="text" name="student_name" placeholder="Enter Student Name" required>
 

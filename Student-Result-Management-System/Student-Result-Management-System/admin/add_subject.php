@@ -84,9 +84,9 @@ $deptcode          =           $data->getdeptcode();
             <br>
             <br>
             <label for="lname">Sem</label>
-            <select name="sem_id" id="sem_id" class="form-control" required>
-                <option>Select Sem</option>
-            </select>
+            <label for="lname">Sem</label>
+            <input type="number" name="sem_id" id="sem_id" class="form-control" 
+             placeholder="Enter Semester" required>
             <br>
             <br>
             <label for="fname">Subject-1 Name</label>

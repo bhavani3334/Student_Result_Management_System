@@ -122,7 +122,7 @@ $s6 = $_GET['s6'];
 
 </html>
 <?php
-$conn = mysqli_connect("localhost", "root", "", "srms");
+$conn = mysqli_connect("localhost", "root", "", "stud-result-mgmt-sys");
 if ($conn === false) {
     die("ERROR: Could not connect. "
         . mysqli_connect_error());

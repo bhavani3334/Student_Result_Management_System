@@ -6,9 +6,8 @@ if ($conn === false) {
         . mysqli_connect_error());
 }
 error_reporting(0);
-$sid = $_GET['id'];
+$sid = $_GET['sid'];
 $sname = $_GET['sname'];
-$susn = $_GET['susn'];
 $dc = $_GET['dc'];
 $cid = $_GET['cid'];
 $sem = $_GET['sem'];
@@ -82,8 +81,8 @@ $sdob = $_GET['sdob'];
             <input type="text" id="fname" name="student_name" value="<?php echo $sname; ?>">
             <br>
             <br>
-            <label for=" lname">Student USN</label>
-            <input type="text" id="lname" name="student_usn" value="<?php echo $susn; ?>">
+            <label for=" lname">Student Id</label>
+            <input type="text" id="lname" name="student_id" value="<?php echo $susn; ?>">
             <br>
             <br>
             <label for=" lname">Department Code</label>

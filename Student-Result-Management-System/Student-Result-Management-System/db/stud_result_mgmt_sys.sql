@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `user_srms` (
 --
 
 INSERT INTO `user_srms` (`user_id`, `user_name`, `user_contact_no`, `user_email`, `user_password`) VALUES
-(1, 'Darshan', '9876543210', 'darshanraj046@gmail.com', 'darsh123');
+(1, 'BHAVANI S', '9380412818', 'bhavani.23ise@cambridge.edu.in', 'cambridge');
 
 --
 -- Constraints for dumped tables

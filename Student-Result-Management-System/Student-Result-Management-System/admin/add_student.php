@@ -73,8 +73,8 @@ $deptcode = $data->getdeptcode();
             <label for="student_name">Student Name</label>
             <input type="text" id="student_name" name="student_name" placeholder="Enter student name" required>
 
-            <label for="student_usn">Student USN</label>
-            <input type="text" id="student_usn" name="student_usn" placeholder="Enter student USN" required>
+            <label for="student_name">Student Id</label>
+            <input type="text" id="student_id" name="student_name" placeholder="Enter student name" required>
 
             <label for="class_id">Department Code</label>
             <select name="class_id" id="class_id" required>
